@@ -1,0 +1,148 @@
+.list{
+  .nav{
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    width:100%;
+    height:42px;
+    background-color:#555;
+    .nav-ul{
+        background-color:#555;
+        li{
+            float:left;
+            margin:6px;
+            a{
+            padding:4px 12px;
+            line-height:30px;
+            color:#fff;
+            border-radius: 8px;
+            &:hover{
+                text-decoration: underline;
+            }
+            &.active{
+                color:#000;
+                background:#fff;
+            }
+            }
+        }
+    }
+    .toggle{
+        display:none;
+        position: absolute;
+        top:14px;
+        left:10px;
+        cursor:pointer;
+        i{
+            display:block;
+            width:20px;
+            height:2px;
+            background-color:#fff;
+            &.middle{
+                margin:4px 0;
+            }
+        }
+        &:hover{
+            i{
+                background-color:#07a0f8;
+            }
+        }
+    }
+    .user{
+        position: absolute;
+        right:4px;
+        top:4px;
+        cursor: pointer;
+        img{
+            display:block;
+            width:34px;
+            height:34px;
+            border-radius:50%;
+            background-color:#fff;
+        }
+    }
+  }
+  .article-list{
+    padding-top:42px;
+    width:100%;
+    li{
+        position: relative;
+        padding:10px 0;
+        width:100%;
+        background-color:#fff;
+        &:hover{
+            background-color:#f6f6f6;
+        }
+        .user_icon{
+            position: absolute;
+            width:72px;
+            top:50%;
+            transform: translateY(-50%);
+            img{
+                display:block;
+                margin:6px;
+                width:60px;
+                height:60px;
+                border-radius: 50%;
+                border:1px solid #ddd;  
+            }
+            .name{
+                line-height:20px;
+                text-align: center;
+                white-space: nowrap;
+                overflow:hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        .info{
+            margin-left:76px;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            .marked{
+                font-weight:bold;
+                line-height:20px;
+                .top{
+                    color:#f03506;
+                }
+                .good{
+                    color:#19f006;
+                }
+                .tab{
+                    color:#0673f0;
+                }
+            }
+            .title{            
+                font-size:16px;
+                font-weight:bold;
+                line-height:30px;
+                color:#000;
+                &:hover{
+                    text-decoration:underline;
+                }
+            }
+            .visit{
+                line-height:20px;
+            }
+        }
+    }
+  }
+  @media screen and (max-width:500px){
+    .nav{
+        .toggle{
+            display:block;
+        }
+        .nav-ul{
+            display:none;
+            &.show{
+                display:block;
+                margin-top:42px;
+                li{
+                    float:none;
+                    text-align: center;
+                }
+            }
+        }
+    }
+  }
+}
