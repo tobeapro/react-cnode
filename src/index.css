@@ -12,11 +12,13 @@ table,caption,tbody,tfoot,thead,tr,th,td,input,textarea,button,i,span{
 	border:0;
 	box-sizing: border-box;
 }
-body{
-	font-family: "Microsoft YaHei UI","Microsoft YaHei","PingFang SC","Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 12px;
-	height:100%;
-	}
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size:12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:#eee;
+}
 input,button,textarea,td,th,select{outline:none;}
 table {border-collapse:collapse;border-spacing:0;}
 ol,ul{list-style: none;}
@@ -28,4 +30,67 @@ a,a:visited,a:active,a:link{text-decoration:none;}
 }
 .clearfix{
 	zoom:1;
+}
+#app{
+  background-color:#eee;
+}
+.container{
+  margin:0 auto;
+  max-width:980px;
+  background-color:#fff;
+}
+button{
+  transition: all .2s;
+  padding:6px 12px;
+  color:#fff;
+  background-color:#07a0f8;
+  border-radius: 6px;
+  cursor:pointer;
+}
+button:hover{
+  background-color:#0475f7;
+}
+.loading:before{
+  content:'';
+  position:fixed;
+  z-index:100;
+  top:42px;
+  bottom:0;
+  width:100%;
+  background-color:#fff;
+}
+.loading:after{
+  content:'';
+  position:fixed;
+  z-index:101;
+  top:30%;
+  left:50%;
+  margin-left:-20px;
+  animation: loading 1s linear infinite;
+  width:40px;
+  height:40px;
+  border:1px solid #0673f0;
+  border-top-color: transparent;
+  border-radius: 50%;
+}
+@keyframes loading {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}
+.backTop{
+  position:fixed;
+  z-index:10;
+  transition: right .4s ease-out;
+  right:-80px;
+  bottom:80px;
+  padding:2px 6px;
+  background-color:#08a1fa;
+  border-radius: 4px;
+  cursor:pointer;
+}
+.backTop.active{
+  right:6px;
+}
+.backTop:hover{
+  background-color:#046ef8;
 }

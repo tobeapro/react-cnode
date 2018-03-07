@@ -1,0 +1,51 @@
+.new {
+  padding-top: 40px; }
+  .new .back {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #555; }
+    .new .back .toHome {
+      float: left;
+      width: 40px;
+      line-height: 40px;
+      cursor: pointer; }
+      .new .back .toHome img {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle; }
+  .new .article {
+    padding: 6px 12px; }
+    .new .article span {
+      font-size: 14px;
+      line-height: 30px;
+      margin-right: 10px; }
+    .new .article .tab {
+      margin: 10px 0; }
+    .new .article input, .new .article select {
+      padding-left: 6px;
+      height: 30px;
+      border: 1px solid #aaa;
+      border-radius: 4px; }
+      .new .article input:focus, .new .article select:focus {
+        border-color: #08a4ec;
+        box-shadow: 0 0 1px #08a4ec; }
+    .new .article textarea {
+      padding-left: 10px;
+      width: 100%;
+      height: 200px;
+      font-size: 16px;
+      line-height: 20px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      resize: none; }
+      .new .article textarea:focus {
+        border-color: #08a4ec;
+        box-shadow: 0 0 1px #08a4ec; }
+    .new .article .clear {
+      margin-left: 10px;
+      background-color: #aaa; }

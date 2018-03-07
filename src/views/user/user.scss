@@ -1,0 +1,71 @@
+.user{
+  padding-top:40px;
+  .back{
+      position:fixed;
+      z-index:1;
+      top:0;
+      left:0;
+      width:100%;
+      height:40px;
+      text-align:center;
+      background-color:#555;
+      .toHome{
+          float:left;
+          width:40px;
+          line-height:40px;
+          cursor:pointer;
+          img{
+              width:20px;
+              height:20px;
+              vertical-align:middle;
+          }
+      }
+  }
+  h4{
+    padding:0 10px;
+    line-height:40px;
+    background-color:#ddd;
+  }
+  .info{
+    padding-left:10px;
+    .avatar{
+      margin:10px 0;
+      img{
+        width:100px;
+        height:100px;
+      }
+    }
+    p{
+      font-size:14px;
+      line-height:20px;
+      a{
+        color:#555;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .topic-list{
+    li{
+      display:flex;
+      align-items:center;
+      border-bottom:1px solid #ddd;
+      img{
+        margin:6px 10px;
+        width:40px;
+        height:40px;
+        border-radius: 50%;
+        border:1px solid #ddd;
+      }
+      a{
+        font-weight:bold;
+        color:#666;
+        &:hover{
+          color:#000;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

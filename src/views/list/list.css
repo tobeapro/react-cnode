@@ -1,0 +1,115 @@
+.list .nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42px;
+  background-color: #555; }
+  .list .nav .nav-ul {
+    background-color: #555; }
+    .list .nav .nav-ul li {
+      float: left;
+      margin: 6px; }
+      .list .nav .nav-ul li a {
+        padding: 4px 12px;
+        line-height: 30px;
+        color: #fff;
+        border-radius: 8px; }
+        .list .nav .nav-ul li a:hover {
+          text-decoration: underline; }
+        .list .nav .nav-ul li a.active {
+          color: #000;
+          background: #fff; }
+  .list .nav .toggle {
+    display: none;
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    cursor: pointer; }
+    .list .nav .toggle i {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: #fff; }
+      .list .nav .toggle i.middle {
+        margin: 4px 0; }
+    .list .nav .toggle:hover i {
+      background-color: #07a0f8; }
+  .list .nav .user {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    cursor: pointer; }
+    .list .nav .user img {
+      display: block;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: #fff; }
+
+.list .article-list {
+  padding-top: 42px;
+  width: 100%;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd; }
+  .list .article-list li {
+    position: relative;
+    padding: 10px 0;
+    width: 100%;
+    background-color: #fff; }
+    .list .article-list li:hover {
+      background-color: #f6f6f6; }
+    .list .article-list li .user_icon {
+      position: absolute;
+      width: 72px;
+      top: 50%;
+      transform: translateY(-50%); }
+      .list .article-list li .user_icon img {
+        display: block;
+        margin: 6px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid #ddd; }
+      .list .article-list li .user_icon .name {
+        line-height: 20px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+    .list .article-list li .info {
+      margin-left: 76px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      .list .article-list li .info .marked {
+        font-weight: bold;
+        line-height: 20px; }
+        .list .article-list li .info .marked .top {
+          color: #f03506; }
+        .list .article-list li .info .marked .good {
+          color: #19f006; }
+        .list .article-list li .info .marked .tab {
+          color: #0673f0; }
+      .list .article-list li .info .title {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 30px;
+        color: #000; }
+        .list .article-list li .info .title:hover {
+          text-decoration: underline; }
+      .list .article-list li .info .visit {
+        line-height: 20px; }
+
+@media screen and (max-width: 500px) {
+  .list .nav .toggle {
+    display: block; }
+  .list .nav .nav-ul {
+    display: none; }
+    .list .nav .nav-ul.show {
+      display: block;
+      margin-top: 42px; }
+      .list .nav .nav-ul.show li {
+        float: none;
+        text-align: center; } }

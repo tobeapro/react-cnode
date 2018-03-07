@@ -1,0 +1,140 @@
+.markdown-text p, .preview p {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  line-height: 2em;
+  margin: 1em 0; }
+
+.markdown-text > :last-child, .preview > :last-child, textarea#title {
+  margin-bottom: 1em; }
+
+.markdown-text > :first-child, .preview > :first-child {
+  margin-top: 0; }
+
+.markdown-text li, .preview li {
+  font-size: 14px;
+  line-height: 2em; }
+
+.markdown-text li code, .markdown-text p code, .preview li code, .preview p code {
+  color: #000;
+  background-color: #fcfafa;
+  padding: 4px 6px; }
+
+.markdown-text img {
+  width: 100%;
+  max-width: 980px;
+  cursor: pointer; }
+
+.markdown-text h1 code, .markdown-text h2 code, .markdown-text h3 code, .markdown-text h4 code, .markdown-text h5 code, .markdown-text h6 code {
+  font-size: inherit;
+  color: inherit; }
+
+.markdown-text pre {
+  padding: 6px;
+  color: #555;
+  background-color: #ddd; }
+
+.detail {
+  margin: 40px 0; }
+  .detail .back {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #555; }
+    .detail .back .toHome {
+      float: left;
+      width: 40px;
+      line-height: 40px;
+      cursor: pointer; }
+      .detail .back .toHome img {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle; }
+    .detail .back .user {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      cursor: pointer; }
+      .detail .back .user img {
+        display: block;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: #fff; }
+  .detail .header {
+    padding: 10px; }
+    .detail .header .title {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 30px; }
+    .detail .header .info {
+      line-height: 20px;
+      color: #aaa; }
+      .detail .header .info .top {
+        font-weight: bold;
+        color: #f03506; }
+  .detail .content {
+    padding: 0 10px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+  .detail .reply {
+    margin-top: 10px; }
+    .detail .reply h4 {
+      padding-left: 10px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #ddd; }
+    .detail .reply .reply-list {
+      margin-top: 10px;
+      border-top: 1px solid #ddd; }
+      .detail .reply .reply-list li {
+        position: relative;
+        padding-left: 10px;
+        border-bottom: 1px solid #ddd; }
+        .detail .reply .reply-list li .author {
+          line-height: 42px; }
+          .detail .reply .reply-list li .author img.avatar {
+            float: left;
+            margin: 6px 0;
+            width: 30px;
+            height: 30px; }
+          .detail .reply .reply-list li .author .name {
+            margin-left: 6px; }
+          .detail .reply .reply-list li .author .time {
+            margin-left: 10px;
+            color: #08c; }
+        .detail .reply .reply-list li .reply-btn {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          padding: 4px 6px;
+          color: #fff;
+          background-color: #aaa;
+          border-radius: 6px;
+          cursor: pointer; }
+          .detail .reply .reply-list li .reply-btn:hover {
+            color: #fff;
+            text-decoration: underline; }
+  .detail .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #555; }
+    .detail .footer .input {
+      margin: 8px 60px 8px 10px; }
+      .detail .footer .input input {
+        padding: 0 6px;
+        width: 100%;
+        line-height: 24px;
+        border-radius: 6px; }
+    .detail .footer .confirm {
+      position: absolute;
+      top: 6px;
+      right: 4px; }
