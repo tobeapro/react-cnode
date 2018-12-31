@@ -142,7 +142,8 @@ export default class list  extends Component {
               <li><a href="/" onClick={(e)=>{this.changeTab(e,'job')}} className={this.state.tab==='job'?'active':''}>招聘</a></li>    
               <li><a href="/" onClick={(e)=>{this.changeTab(e,'dev')}} className={this.state.tab==='dev'?'active':''}>客户端测试</a></li>       
             </ul>
-            <div className="user" onClick = {this.toggleLogin}>
+          </div>
+          <div className="user" onClick = {this.toggleLogin}>
               <img src={this.state.userInfo.avatar_url||noUser} title={this.state.userInfo.loginname||'请登录'}/>
             </div>
             {
@@ -150,7 +151,6 @@ export default class list  extends Component {
               <Login toggleLogin={this.toggleLogin} history={this.props.history}/>
               ):null
             }
-          </div>
         </div>
         <div className='container'>
         <ul className='article-list'>        
