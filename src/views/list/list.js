@@ -2,6 +2,9 @@ import './list.css'
 import React,{Component} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
+import noUser from '../../assets/noUser.png'
+import Login from '../login'
+import store from '../../store'
 export default class list  extends Component {
   constructor(props){
     super(props)
@@ -10,13 +13,21 @@ export default class list  extends Component {
       page:1,
       list:[],
       loadingStatus:true,
-      tabStatus:false
+      tabStatus:false,
+      showLogin:false,
+      ...store.getState()
     }
     this.loadMoreData=this.loadMoreData.bind(this)
     this.changeTab=this.changeTab.bind(this)
     this.tabType=this.tabType.bind(this)
     this.toUserInfo=this.toUserInfo.bind(this)
     this.showTab=this.showTab.bind(this)
+    this.toggleLogin=this.toggleLogin.bind(this)
+    this.subscribeStore=this.subscribeStore.bind(this)
+    store.subscribe(this.subscribeStore)
+  }
+  subscribeStore(){
+    this.setState(store.getState()) 
   }
   componentWillMount(){
     axios.get(`https://cnodejs.org/api/v1/topics?page=${this.state.page}&tab=${this.state.tab}`)
@@ -106,6 +117,13 @@ export default class list  extends Component {
       tabStatus:!this.state.tabStatus,
     })
   }
+  toggleLogin(){
+    this.setState((prevState)=>{
+      return {
+        showLogin:!prevState.showLogin
+      }
+    })
+  }
   render(){
     return(
       <div className={this.state.loadingStatus?'list loading':'list'}>
@@ -124,6 +142,14 @@ export default class list  extends Component {
               <li><a href="/" onClick={(e)=>{this.changeTab(e,'job')}} className={this.state.tab==='job'?'active':''}>招聘</a></li>    
               <li><a href="/" onClick={(e)=>{this.changeTab(e,'dev')}} className={this.state.tab==='dev'?'active':''}>客户端测试</a></li>       
             </ul>
+            <div className="user" onClick = {this.toggleLogin}>
+              <img src={this.state.userInfo.avatar_url||noUser} title={this.state.userInfo.loginname||'请登录'}/>
+            </div>
+            {
+              this.state.showLogin?(
+              <Login toggleLogin={this.toggleLogin} history={this.props.history}/>
+              ):null
+            }
           </div>
         </div>
         <div className='container'>

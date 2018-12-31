@@ -4,6 +4,8 @@ import axios from 'axios'
 import qs from 'qs'
 import noUser from '../../assets/noUser.png'
 import back from '../../assets/back.png'
+import Login from '../login'
+import store from '../../store'
 export default class detail extends Component {
   constructor(props){
     super(props)
@@ -21,7 +23,9 @@ export default class detail extends Component {
       commentText:'',
       noUser,
       back,
-      replyIndex:0
+      replyIndex:0,
+      showLogin:false,
+      ...store.getState()
       }
     this.toHome=this.toHome.bind(this)
     this.countTime=this.countTime.bind(this)
@@ -30,6 +34,12 @@ export default class detail extends Component {
     this.reply=this.reply.bind(this)
     this.confirmReply=this.confirmReply.bind(this)
     this.changeReplyText=this.changeReplyText.bind(this)
+    this.toggleLogin=this.toggleLogin.bind(this)
+    this.subscribeStore=this.subscribeStore.bind(this)
+    store.subscribe(this.subscribeStore)
+  }
+  subscribeStore(){
+    this.setState(store.getState()) 
   }
   componentWillMount(){
     axios.get('https://cnodejs.org/api/v1/topic/'+this.props.match.params.id)
@@ -98,7 +108,7 @@ export default class detail extends Component {
   }
   confirmReply(e){
     e.stopPropagation()
-    if(this.token===''){
+    if(this.state.token===''){
         alert('请先登录')
         return
     }else{
@@ -133,6 +143,13 @@ export default class detail extends Component {
         })
     }
   }
+  toggleLogin(){
+    this.setState((prevState)=>{
+      return {
+        showLogin:!prevState.showLogin
+      }
+    })
+  }
   render(){
     return(
       <div className={this.state.loadingStatus?'detail loading':'detail'}>
@@ -140,6 +157,14 @@ export default class detail extends Component {
           <div className='toHome' onClick={this.toHome}>
             <img src={back} alt='back' />
           </div>
+          <div className="user" onClick = {this.toggleLogin}>
+            <img src={this.state.userInfo.avatar_url||noUser} title={this.state.userInfo.loginname||'请登录'}/>
+          </div>
+          {
+            this.state.showLogin?(
+             <Login toggleLogin={this.toggleLogin} history={this.props.history}/>
+            ):null
+          }
         </div>
         <div className='container'>
           <div className='header'>

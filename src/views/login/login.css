@@ -1,0 +1,43 @@
+.login{
+    position: fixed;
+    z-index:10;
+    top:0;
+    bottom:0;
+    width:100%;
+    background:rgba(0,0,0,.4);
+}
+.login-part{
+    position: absolute;
+    right:6px;
+    top:6px;
+    padding:10px;
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+}
+.login-part .loginName{
+    font-size:14px;
+    line-height:30px;
+    cursor: pointer;
+}
+.login-part .loginName:hover{
+    text-decoration: underline;
+}
+.login-part input{
+    display: block;
+    margin:10px 0;
+    padding-left: 6px;
+    line-height: 26px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.login-part input:focus{
+    border-color: #08a4ec;
+    box-shadow: 0 0 1px #08a4ec;
+}
+.login-part .handle-part{
+    margin:10px 0;
+}
+.login-part .logout-btn{
+    background:#aaa;
+}
