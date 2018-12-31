@@ -1,55 +1,55 @@
-.user {
-  /* padding-top: 40px;  */
-}
-  .user .back {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    text-align: center;
-    background-color: #555; }
-    .user .back .toHome {
-      float: left;
-      width: 40px;
-      line-height: 40px;
-      cursor: pointer; }
-      .user .back .toHome img {
-        width: 20px;
-        height: 20px;
-        vertical-align: middle; }
-  .user h4 {
-    padding: 0 10px;
+.user .back {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: #555; }
+  .user .back .toHome {
+    float: left;
+    width: 40px;
     line-height: 40px;
-    background-color: #ddd; }
-  .user .info {
-    padding-left: 10px; }
-    .user .info .avatar {
-      margin: 10px 0; }
-      .user .info .avatar img {
-        width: 100px;
-        height: 100px; }
-    .user .info p {
-      font-size: 14px;
-      line-height: 20px; }
-      .user .info p a {
-        color: #555; }
-        .user .info p a:hover {
-          text-decoration: underline; }
-  .user .topic-list li {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ddd; }
-    .user .topic-list li img {
-      margin: 6px 10px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 1px solid #ddd; }
-    .user .topic-list li a {
-      font-weight: bold;
-      color: #666; }
-      .user .topic-list li a:hover {
-        color: #000;
+    cursor: pointer; }
+    .user .back .toHome img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle; }
+
+.user h4 {
+  padding: 0 10px;
+  line-height: 40px;
+  background-color: #ddd; }
+
+.user .info {
+  padding-left: 10px; }
+  .user .info .avatar {
+    margin: 10px 0; }
+    .user .info .avatar img {
+      width: 100px;
+      height: 100px; }
+  .user .info p {
+    font-size: 14px;
+    line-height: 20px; }
+    .user .info p a {
+      color: #555; }
+      .user .info p a:hover {
         text-decoration: underline; }
+
+.user .topic-list li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd; }
+  .user .topic-list li img {
+    margin: 6px 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd; }
+  .user .topic-list li a {
+    font-weight: bold;
+    color: #666; }
+    .user .topic-list li a:hover {
+      color: #000;
+      text-decoration: underline; }
